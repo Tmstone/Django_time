@@ -7,9 +7,9 @@ from datetime import datetime
 def index(request):
     content = {
         "date": strftime('%B %d, %Y '),
-        "time": strftime('%H:%M %p'),
+        "time": strftime('%I:%M %p'),
     }
     local_time = datetime.now()
-    current_time = local_time.strftime('%H:%M %p')
+    current_time = local_time.strftime('%I:%M %p')
     print(current_time)
     return render(request, 'time_display/index.html', content)
